@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Audit Analytics Result</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css">
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body { padding: 2rem; background: var(--bg-main); background-image: radial-gradient(circle at 100% 0%, #1e1b4b 0%, #fff 40%); }
+    </style>
+</head>
+<body>
+    <div class="card" id="result-container" style="max-width: 1000px; margin: 0 auto; min-height: 80vh;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+            <h2><i class="icon-lucide-zap" style="color:var(--primary);"></i> AI Audit Analytics Report</h2>
+            <button class="btn btn-primary" onclick="window.close()"><i class="icon-lucide-x"></i> Close Tab</button>
+        </div>
+
+        <div id="status-card" style="padding: 2.5rem; text-align: center; border-radius: var(--radius-xl); background: #ffffff; margin-bottom: 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border);">
+            <!-- Status injected by result.js -->
+        </div>
+        
+        <div class="analytics-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 2rem;">
+            <div class="stat-card" style="background: white; border: 1px solid var(--border); height: 350px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <canvas id="riskChart"></canvas>
+            </div>
+            <div class="stat-card" style="background: white; border: 1px solid var(--border); height: 350px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                <canvas id="budgetChart"></canvas>
+            </div>
+        </div>
+        
+        <div id="details-pane" style="background: #f8fafc; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border);">
+            <!-- Policy injected here -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/result.js"></script>
+</body>
+</html>

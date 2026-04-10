@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy-First Expense Auditor</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="icon-lucide-shield-check"></i>
+                <span>AuditPro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-route="home" class="active"><i class="icon-lucide-home"></i> Home Overview</a></li>
+                <li><a href="#" data-route="employee"><i class="icon-lucide-receipt"></i> Submit Expense</a></li>
+                <li><a href="#" data-route="auditor"><i class="icon-lucide-layout-dashboard"></i> Finance Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content-area">
+            <header class="top-header">
+                <h1 id="page-title">Submit Expense</h1>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Employee&background=random" alt="User Avatar" class="avatar">
+                    <span class="user-name">Employee Portal</span>
+                </div>
+            </header>
+            <div id="view-container">
+                <!-- Views get injected here by app.js -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/tesseract.js@v4.0.0/dist/tesseract.min.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/mockEngine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
